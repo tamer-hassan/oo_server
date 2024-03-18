@@ -1832,6 +1832,12 @@ exports.install = function(server, callbackFunction) {
         // For this user, remove the Lock from the document
         yield* checkEndAuthLock(ctx, true, false, docId, conn.user.id);
 
+        const params = yield getCallback(ctx, docId);
+        if (params?.wopiParams) {
+          const accessToken = params?.wopiParams.access_token;
+          wopiClient.closeLogSession(accessToken);
+        }
+
         let userIndex = utils.getIndexFromUserId(tmpUser.id, tmpUser.idOriginal);
         // If we do not have users, then delete all messages
         if (!bHasEditors) {
