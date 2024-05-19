@@ -65,4 +65,4 @@ exports.readLicense = function*() {
 	}, null];
 };
 
-exports.packageType = constants.PACKAGE_TYPE_I;
+exports.packageType = constants.PACKAGE_TYPE_OS;
