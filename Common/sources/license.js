@@ -45,7 +45,7 @@ exports.readLicense = function*() {
 		count: 1,
 		type: c_LR.Success,
 		light: false,
-		packageType: constants.PACKAGE_TYPE_I,
+		packageType: constants.PACKAGE_TYPE_OS,
 		mode: constants.LICENSE_MODE.None,
 		branding: true,
 		connections: constants.LICENSE_CONNECTIONS,
